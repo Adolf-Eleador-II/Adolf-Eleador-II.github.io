@@ -98,6 +98,7 @@ function allowBuy(element, cost, id){
         var elementTime=cardWood.closest("div").querySelector(".cardTimer");
         elementTime.innerHTML = "Click now!";
         removeCardId("buy" + id)
+        document.getElementById("barnOpen").click();
     }
     else{
         var buyText = element.closest("div").querySelector(".costCow");

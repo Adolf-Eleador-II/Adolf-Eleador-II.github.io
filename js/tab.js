@@ -1,5 +1,5 @@
 
-document.getElementById("defaultOpen").click();
+document.getElementById("barnOpen").click();
 
 function openTab(evt, openTab) {
     var i, tabcontent, tablinks;
