@@ -1,0 +1,86 @@
+
+.cardCollection {
+    width: 100%;
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, 326px);
+    grid-template-rows: repeat(auto-fit, 400px);
+    grid-gap: 5px;
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.card{
+    box-sizing: border-box;
+    width: 326px;
+    height: 400px;
+    border: 1px solid black;
+    z-index: 0;
+}
+
+.cardCow{
+    width: 230px;
+    height: 250px;
+}
+.cardText{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 10px;
+    height: min-content;
+    gap: 5px;
+}
+
+
+
+
+
+.cardGrass{
+    background-color: #d2f7c8;
+    background: url("../img/background_grass.png");
+}
+.cardAvatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.cardNameUser{
+    font-size: 16pt;
+    width: 247px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardWood{
+    color: white;
+    background-color: #764c02;
+    background: url("../img/background_wood.png");
+}
+
+.platformCow{
+    height: 0;
+}
+
+.platformCow img{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,-75%);
+    z-index: -1;
+}
+
+.cardBuy{
+    background-color: #d3d3d3;
+}
+.costCow{
+    width: max-content;
+}
+.cardRank{
+    background-color: #ffff00;
+    background-image: url("../img/golden_pattern.png");
+}
+
+

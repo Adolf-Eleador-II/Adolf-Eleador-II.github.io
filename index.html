@@ -1,0 +1,313 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cow Clicker</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/statistics.css">
+        <link rel="stylesheet" href="css/card.css">
+        <link rel="stylesheet" href="css/invite.css">
+        <link rel="stylesheet" href="css/draft.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Acme&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="sHeader">
+            <div class="ProjectHeader">
+                <img src="img/wood.png" class="logoProjectHeader">
+                <div class="nameProjectHeader">
+                    Welcome to the Cow Clicker
+                </div>
+            </div>
+            <div class="grass-top">
+                <div class="textClickHeader">
+                    <p>Next click in...</p>
+                    <p id="headerTimer">Click now!</p>
+                </div>
+                <div>
+                    <img class="headerCow" id="clickHeaderCow" src="cow/cow0.svg">
+                </div>
+            </div>
+            <div class="grass-bottom"></div>
+        </header>
+        <section class="sMain">
+            <div class="buttonBar">
+                <div class="buttons">
+                    <button class="buttonTab" onclick="openTab(event, 'yourPasture')">Your Pasture</button>
+                    <button class="buttonTab" onclick="openTab(event, 'yourBarn')" id="defaultOpen">Your Barn</button>
+                    <button class="buttonTab" onclick="openTab(event, 'buyCow')" id="buyOpen">Buy a Cow</button>
+                    <button class="buttonTab" onclick="openTab(event, 'rankings')">Rankings</button>
+                </div>
+                <div class="buttons">
+                    <button class="buttonTab" onclick="openInviteButton()">Invite a Cow</button>
+                    <button class="buttonTab" onclick="window.open('http://www.cowclicker.com/')">Discussion</button> <!---->
+                    <button class="buttonTab" onclick="openTab(event, 'howPlay')">How to Play</button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="statistics">
+                    <div class="points">
+                        <div class="column">
+                            <h3 class="left">Next Click In...</h3>
+                            <p class="right" id="statTimer">Click now!</p>
+                        </div>
+                        <div class="column">
+                            <h3 class="left">Mooney</h3>
+                            <p class="right" id="statMooney">73</p>
+                        </div>
+                        <din class="column">
+                            <h3 class="left">Cow Clicks</h3>
+                            <p class="right" id="statClick">33</p>
+                            <div class="row">
+                                <p class="left">This Week:</p>
+                                <p class="right" id="statClickWeek">15</p>
+                            </div>
+                        </din>
+                    </div>
+                </div>
+                <div class="contentTab" id="yourPasture">
+                    <div class="contentText">
+                        <p>This section will display your friends and their Cow.</p>
+                    </div>
+                    <div class="cardCollection">
+                        <div class="card cardGrass" id="0000">
+                            <div class="column cardGrassContent">
+                                <div class="left cardText">
+                                    <img class="cardAvatar" src="avatar/Avatar0.jpg">
+                                    <div class="column">
+                                        <p class="left cardNameUser">Your Cow</p>
+                                        <p class="left">ID: 0000</p>
+                                    </div>
+                                </div>
+                                <div class="cardCowImg">
+                                    <img class="cardCow" id="yourCow" src="cow/cow1.svg">
+                                </div>
+                                <div style="height: 32px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentTab" id="yourBarn">
+                    <div class="contentText">
+                        <h1>Behold, Bovines</h1>
+                        <p>Here you can see all the cows you have purchased. You can switch out your current cow for one of these cows as often as you want.</p>
+                        <p>Why not get some moony and go buy a new cow? Don`t you want to collect them all? That`s the sort of thing people seem to do. The available cows will change over time, thus there`s some chance you might miss out. How would you live with yourself?</p>
+                    </div>
+                    <div class="cardCollection">
+                        <div class="card cardWood">
+                            <div class="column cardWoodContent">
+                                <div class="cardCowImg">
+                                    <img class="cardCow" src="cow/cow1.svg">
+                                </div>
+                                <div class="column cardText">
+                                    <p class="cardNameCow">Plain Cow</p>
+                                    <p class="cardTimer">Buy me</p>
+                                    <button class="buttonWood" onclick="buyGo('PlainCow')" id="barnPlainCow">Go buy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cardWood">
+                            <div class="column cardWoodContent">
+                                <div class="cardCowImg">
+                                    <img class="cardCow" src="cow/cow2.svg">
+                                </div>
+                                <div class="column cardText">
+                                    <p class="cardNameCow">Hereford Cow</p>
+                                    <p class="cardTimer">Buy me</p>
+                                    <button class="buttonWood" onclick="buyGo('HerefordCow')" id="barnHerefordCow">Go buy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cardWood">
+                            <div class="column cardWoodContent">
+                                <div class="cardCowImg">
+                                    <img class="cardCow" src="cow/cow3.svg">
+                                </div>
+                                <div class="column cardText">
+                                    <p class="cardNameCow">Yellow Cow</p>
+                                    <p class="cardTimer">Buy me</p>
+                                    <button class="buttonWood" onclick="buyGo('YellowCow')" id="barnYellowCow">Go buy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cardWood">
+                            <div class="column cardWoodContent">
+                                <div class="cardCowImg">
+                                    <img class="cardCow" src="cow/cow4.svg">
+                                </div>
+                                <div class="column cardText">
+                                    <p class="cardNameCow">Steel Cow</p>
+                                    <p class="cardTimer">Buy me</p>
+                                    <button class="buttonWood" onclick="buyGo('SteelCow')" id="barnSteelCow">Go buy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentTab" id="buyCow">
+                    <div class="contentText">
+                        <p>This section will show cows that you can buy at a reasonable price.</p>
+                    </div>
+                    <div class="cardCollection">
+                        <div class="card cardBuy" id="buyPlainCow">
+                            <div class="column cardBuyContent">
+                                <div class="cardCow">
+                                    <img src="cow/cow1.svg">
+                                    <div class="platformCow">
+                                        <img src="img/platform_silver.png">
+                                    </div>
+                                </div>
+                                <div class="column cardText">
+                                    <p>Plain Cow</p>
+                                    <p class="costCow">Cost: 1 Mooney</p>
+                                    <button class="buttonBuy" onclick="allowBuy(this,1,'PlainCow')">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cardBuy" id="buyHerefordCow">
+                            <div class="column cardBuyContent">
+                                <div class="cardCow">
+                                    <img src="cow/cow2.svg">
+                                    <div class="platformCow">
+                                        <img src="img/platform_silver.png">
+                                    </div>
+                                </div>
+                                <div class="column cardText">
+                                    <p>Hereford Cow</p>
+                                    <p class="costCow">Cost: 3 Mooney</p>
+                                    <button class="buttonBuy" onclick="allowBuy(this,3,'HerefordCow')">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cardBuy" id="buyYellowCow">
+                            <div class="column cardBuyContent">
+                                <div class="cardCow">
+                                    <img src="cow/cow3.svg">
+                                    <div class="platformCow">
+                                        <img src="img/platform_silver.png">
+                                    </div>
+                                </div>
+                                <div class="column cardText">
+                                    <p>Yellow Cow</p>
+                                    <p class="costCow">Cost: 3 Mooney</p>
+                                    <button class="buttonBuy" onclick="allowBuy(this,3,'YellowCow')">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cardBuy" id="buySteelCow">
+                            <div class="column cardBuyContent">
+                                <div class="cardCow">
+                                    <img src="cow/cow4.svg">
+                                    <div class="platformCow">
+                                        <img src="img/platform_silver.png">
+                                    </div>
+                                </div>
+                                <div class="column cardText">
+                                    <p>Steel Cow</p>
+                                    <p class="costCow">Cost: 3 Mooney</p>
+                                    <button class="buttonBuy" onclick="allowBuy(this,3,'SteelCow')">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentTab" id="rankings">
+                    <div class="contentText">
+                        <p>This section will show the best Owners and their beautiful Cows.</p>  
+                    </div>
+                    <div class="cardCollection">
+                        <div class="card cardRank">
+                            <div class="column cardRankContent">
+                                <div class="cardCow">
+                                    <img src="cow/cow0.svg">
+                                    <div class="platformCow">
+                                        <img src="img/platform_gold.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cardRank">
+                            <div class="column cardRankContent">
+                                <div class="cardCow">
+                                    <img src="cow/cow0.svg">
+                                    <div class="platformCow">
+                                        <img src="img/platform_gold.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cardRank">
+                            <div class="column cardRankContent">
+                                <div class="cardCow">
+                                    <img src="cow/cow0.svg">
+                                    <div class="platformCow">
+                                        <img src="img/platform_gold.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cardRank">
+                            <div class="column cardRankContent">
+                                <div class="cardCow">
+                                    <img src="cow/cow0.svg">
+                                    <div class="platformCow">
+                                        <img src="img/platform_gold.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentTab" id="howPlay">
+                    <div class="contentText">
+                        <p>...</p>  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sInvite">
+            <div style="position: relative; margin: auto;">
+                <button class="closeBotton" onclick="closeInviteButton()">x</button>
+                <div class="column containerInvite">
+                    <h1>Invite a cow</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    
+                    <label for="nameUser">Name User</label>
+                    <input type="text" value="Name User" id="nameUserInvite">
+                    
+                    <label for="avatarUser">Avatar User</label>
+                    <input type="file" id="avatarUserInvite">
+                    
+                    <label for="nameUserCow">Choose Image of Cow</label>
+                    <select onchange="chageInviteCow(this)" id="nameUserCowInvite">
+                        <option value="cow/cow1.svg">Plain Cow</option>
+                        <option value="cow/cow2.svg">Hereford Cow</option>
+                        <option value="cow/cow3.svg">Yellow Cow</option>
+                    </select>
+
+                    <div class="cardCowImg">
+                        <img class="cardCow" src="cow/cow0.svg">
+                    </div>
+
+                    <button type="submit" class="registerbtn" onclick="addInviteCard(), closeInviteButton()">Register</button>
+                </div>
+            </div>
+        </section>
+        <script src="js/tab.js" type="text/javascript"></script>
+        <script src="js/stat.js" type="text/javascript"></script>
+        <script src="js/card.js" type="text/javascript"></script>
+        <script src="js/invite.js" type="text/javascript"></script>
+    </body>
+</html>
+
+
+
+

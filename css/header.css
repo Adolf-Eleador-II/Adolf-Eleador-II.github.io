@@ -1,0 +1,49 @@
+
+
+header{
+    min-width: 1160px;
+    background: #d2f6c8;
+    text-align: center;
+}
+
+.headerCow{
+    height: 500px;
+}
+
+.ProjectHeader{
+    padding-top: 25px;
+    background: #d0f0ff;
+}
+
+.logoProjectHeader{
+    height: 150px;
+    width: 1160px;
+}
+
+.nameProjectHeader{
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 110px;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 48pt;
+    color: white;
+}
+
+.textClickHeader{
+    padding-bottom: 100px;
+    font-size: 32pt;
+}
+
+.grass-top {
+    background-image: url("../img/grass-top.png");
+    background-repeat: repeat-x;
+}
+
+.grass-bottom{
+    background-image: url("../img/grass-bottom.png");
+    background-repeat: repeat-x;
+    height: 6px;
+    border-bottom: 25px solid #c1edb3;
+}
