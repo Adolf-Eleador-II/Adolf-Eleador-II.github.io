@@ -6,10 +6,10 @@ function chageInviteCow(element){
 
 function addInviteCard(){
     var name = document.getElementById("nameUserInvite");
-    var avatar = document.getElementById("avatarUserInvite");
+    //var avatar = document.getElementById("avatarUserInvite");
     var cow = document.getElementById("nameUserCowInvite");
 
-    addCard(avatar.value, name.value, cow.value);
+    addCard(null, name.value, cow.value);
 }
 
 function closeInviteButton(){
