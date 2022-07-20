@@ -95,8 +95,10 @@ function allowBuy(element, cost, id){
         var cardWood = document.getElementById("barn" + id);
         cardWood.setAttribute("onclick", "timerCard(this)");
         cardWood.innerHTML="Click me";
-        var elementTime=cardWood.closest("div").querySelector(".cardTimer");
+        var elementTime = cardWood.closest("div").querySelector(".cardTimer");
         elementTime.innerHTML = "Click now!";
+        var elementCow = cardWood.closest("div.column.cardWoodContent").querySelector(".cardCow");
+        elementCow.setAttribute("onclick", "clickCowImg(this)");
         removeCardId("buy" + id)
         document.getElementById("barnOpen").click();
     }
@@ -107,6 +109,10 @@ function allowBuy(element, cost, id){
     }
 }
 
+function clickCowImg(element){
+    var button = element.closest("div.column.cardWoodContent").querySelector(".buttonWood");
+    button.click();
+}
 
 function buyGo(id){
     document.getElementById("buyOpen").click();
