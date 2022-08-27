@@ -40,3 +40,66 @@
     align-items: center;
     gap: 5px;
 }
+
+
+
+
+
+.sMain{
+    margin: 15px auto 100px auto;
+    width: 1957px;
+}
+
+@media screen and (max-width: 1977px) {
+    .sMain{
+        width: 1626px;
+    }
+}
+
+@media screen and (max-width: 1646px) {
+    .sMain{
+        width: 1295px;
+    }
+}
+
+@media screen and (max-width: 1314px) {
+    .sMain{
+        width: 963px;
+    }
+}
+
+
+
+
+
+.buttonBar{
+    font-size: 0;
+    padding: 0 50px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.buttons{
+    padding: 1px;
+    margin: -1px;
+    margin-bottom: -2px;
+}
+
+button{
+    margin: 0 -1px;
+    padding: 5px 11px;
+    border: 1px solid black;
+    font-size: 12pt;
+    background-color: whitesmoke;
+}
+
+button:hover {
+    background-color: rgba(195, 195, 195, 0.863);
+}
+
+button.active{
+    color: #ffffff;
+    background-color: #6985B4;
+}
